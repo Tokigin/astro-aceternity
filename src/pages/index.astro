@@ -11,8 +11,12 @@ import { ThreeDCardDemo } from "@/components/threedcarddemo";
     <meta name="generator" content={Astro.generator} />
     <title>Astro + Aceternity</title>
   </head>
-  <body>
-    <h1 class="text-center text-5xl p-5">Astro + Aceternity</h1>
-    <ThreeDCardDemo client:idle />
+  <body class="dark">
+    <div
+      class="w-screen h-screen flex flex-col justify-center items-center bg-black text-white"
+    >
+      <h1 class="text-center text-7xl p-5">Astro + Aceternity</h1>
+      <ThreeDCardDemo client:idle />
+    </div>
   </body>
 </html>
