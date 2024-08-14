@@ -19,7 +19,7 @@ I use [Bun](https://bun.sh/) here but you can use npm or npx.
 ### 1. Creating Astro Project
 
 ```sh
-Bun create astro@latest
+bun create astro@latest
 ```
 
 ```text
