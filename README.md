@@ -194,7 +194,7 @@ You can use `client:idle` or `client:load` as you like.
 │       └── index.astro
 │   └── styles/
 │       └── globals.css
-└── env.d.ts
+│   └── env.d.ts
 └── astro.config.mjs
 └── components.json
 └── package.json
