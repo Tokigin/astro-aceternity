@@ -85,7 +85,7 @@ Add the following code to the tsconfig.json file to resolve paths:
 ### 4. Install Shardcn Ui
 
 ```sh
-bunx shadcn-ui@latest init
+bunx shadcn@latest init
 ```
 
 ```text
