@@ -14,7 +14,8 @@ https://ui.aceternity.com/docs/add-utilities
 
 ## Installation
 
-I use [Bun](https://bun.sh/) here but you can use npm or npx.
+I use [Bun](https://bun.sh/) here. 
+> There is some problem with using shardcn cli with npm ([#issue](https://github.com/Tokigin/astro-aceternity/issues/2)) but still no problem with bun. I will find the easy fix and update this instruction.
 
 ### 1. Creating Astro Project
 
