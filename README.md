@@ -14,8 +14,7 @@ https://ui.aceternity.com/docs/add-utilities
 
 ## Installation
 
-I use [Bun](https://bun.sh/) here. 
-> There is some problem with using shardcn cli with npm ([#issue](https://github.com/Tokigin/astro-aceternity/issues/2)) but still no problem with bun. I will find the easy fix and update this instruction.
+I use [Bun](https://bun.sh/) here but you can use npm or npx.
 
 ### 1. Creating Astro Project
 
@@ -81,27 +80,6 @@ Add the following code to the tsconfig.json file to resolve paths:
   }
 }
 ```
-
-### 4. Install Shardcn Ui
-
-```sh
-bunx shadcn@latest init
-```
-
-```text
-√ Would you like to use TypeScript (recommended)? ... yes
-√ Which style would you like to use? » Default
-√ Which color would you like to use as base color? » Slate
-√ Where is your global CSS file? ... ./src/styles/globals.css
-√ Would you like to use CSS variables for colors? ... no
-√ Are you using a custom tailwind prefix eg. tw-? (Leave blank if not) ...
-√ Where is your tailwind.config.js located? ... tailwind.config.mjs
-√ Configure the import alias for components: ... @/components
-√ Configure the import alias for utils: ... @/lib/utils
-√ Are you using React Server Components? ... no
-√ Write configuration to components.json. Proceed? ... yes
-```
-
 Import the `globals.css` file in the `@/pages/index.astro` file:
 
 ```text
@@ -131,6 +109,34 @@ export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
 }
 
+```
+### 4. Install Shardcn Ui
+
+```sh
+bunx shadcn@latest init
+```
+There is still no error after running this command with bun but if you are using npm, there may be an error like this. ([#issue](https://github.com/Tokigin/astro-aceternity/issues/2))
+
+![alt text](https://github.com/Tokigin/astro-aceternity/blob/main/public/npm-shardcn-error.png?raw=true)
+
+To fix this error, you have to create a folder named "npm" in "AppData\Roaming". 
+There are two ways to create the folder. 
+- Open PowerShell and enter `New-Item -Path "$env:APPDATA\npm" -ItemType Directory`.
+- Open Run command window, enter `%appdata%` and create a folder named "npm".
+
+After that, you can continue the process below. 
+```text
+√ Would you like to use TypeScript (recommended)? ... yes
+√ Which style would you like to use? » Default
+√ Which color would you like to use as base color? » Slate
+√ Where is your global CSS file? ... ./src/styles/globals.css
+√ Would you like to use CSS variables for colors? ... no
+√ Are you using a custom tailwind prefix eg. tw-? (Leave blank if not) ...
+√ Where is your tailwind.config.js located? ... tailwind.config.mjs
+√ Configure the import alias for components: ... @/components
+√ Configure the import alias for utils: ... @/lib/utils
+√ Are you using React Server Components? ... no
+√ Write configuration to components.json. Proceed? ... yes
 ```
 
 ### 5. Install Framer Motion
