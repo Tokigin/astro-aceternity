@@ -117,7 +117,7 @@ bunx shadcn@latest init
 ```
 There is still no error after running this command with bun but if you are using npm, there may be an error like this. ([#issue](https://github.com/Tokigin/astro-aceternity/issues/2))
 
-![alt text](https://github.com/Tokigin/astro-aceternity/blob/main/public/npm-shardcn-error.png?raw=true)
+![shardcn-error](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/r3kgq1zefc4rva5i1u44.png)
 
 To fix this error, you have to create a folder named "npm" in "AppData\Roaming". 
 There are two ways to create the folder. 
