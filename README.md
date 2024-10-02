@@ -14,7 +14,8 @@ https://ui.aceternity.com/docs/add-utilities
 
 ## Installation
 
-I use [Bun](https://bun.sh/) here but you can use npm or npx.
+I use [Bun](https://bun.sh/) here. 
+> There is some problem with using shardcn cli with npm ([#issue](https://github.com/Tokigin/astro-aceternity/issues/2)) but still no problem with bun. I will find the easy fix and update this instruction.
 
 ### 1. Creating Astro Project
 
@@ -84,7 +85,7 @@ Add the following code to the tsconfig.json file to resolve paths:
 ### 4. Install Shardcn Ui
 
 ```sh
-bunx shadcn-ui@latest init
+bunx shadcn@latest init
 ```
 
 ```text
@@ -194,7 +195,7 @@ You can use `client:idle` or `client:load` as you like.
 │       └── index.astro
 │   └── styles/
 │       └── globals.css
-└── env.d.ts
+│   └── env.d.ts
 └── astro.config.mjs
 └── components.json
 └── package.json
